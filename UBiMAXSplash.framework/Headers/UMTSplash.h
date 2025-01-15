@@ -24,8 +24,14 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)umtSplashAd:(UMTSplash *)splash didShowFailed:(UMTError *)error;
 /// 开屏广告点击
 - (void)umtSplashAd:(UMTSplash *)splash didClickWithExt:(NSDictionary *)ext;
+/// 开屏广告即将关闭
+/// 目前仅支持 adx gdt
+- (void)umtSplashAd:(UMTSplash *)splash willCloseWithExt:(NSDictionary *)ext;
 /// 开屏广告关闭
 - (void)umtSplashAd:(UMTSplash *)splash didCloseWithExt:(NSDictionary *)ext;
+/// 开屏广告跳转详情页回调
+/// 目前仅支持  gdt ks
+- (void)umtSplashAd:(UMTSplash *)splash willPresentDetailWithExt:(NSDictionary *)ext;
 /// 开屏广告关闭详情页回调
 - (void)umtSplashAd:(UMTSplash *)splash didDetailCloseWithExt:(NSDictionary *)ext;
 @end
